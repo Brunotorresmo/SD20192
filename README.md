@@ -2,12 +2,12 @@
 
 Projeto visa desenvolver métodos e conhecimento na implementação de um sistema distríbuído.
 
-# Be'ngo!
+## Be'ngo!
 
 A idéia é implementar um jogo de bingo em que 4 clients consigam acompanhar os "sorteios" em tempo real até que um dos
 jogadores termine sua "cartela".
 
-# Funcionamento:
+## Funcionamento:
 
 Logo que o servidor inicia, o mesmo aguardará até que os 4 clients sejam conectados na sala, assim que houver a
 confirmação do número de jogadores necessários para iniciar, cada um dos jogadores receberá uma sequência de 10 números (de 1 a 50)
@@ -17,21 +17,25 @@ de sorteio, em cada rodada, um número (de 1 a 50) será sorteado, e cada jogado
 o jogo). Em determinado momento, um dos jogadores terá toda sua cartela preenchida, e o jogo será encerrado, com uma mensagem
 de vitória no client vencedor, e derrota, para os demais.
 
-# Componentes: 
+## Componentes: 
 
 1 servidor, 4 clientes e seus terminais.
 
 # Teste de recuperação de falhas: 
 
--O jogo sempre inicia com 4 jogadores, porém, é possível que a comunicação de um desses jogadores
+* O jogo sempre inicia com 4 jogadores, porém, é possível que a comunicação de um desses jogadores
 falhe no meio da partida, quando ocorrer, espera-se que consigamos prosseguir com a partida com um jogador a menos.
 
--Também é possível existir uma falha que derrube o servidor, nesse caso, conforme orientado, é necessário que o jogo possa voltar
+* Também é possível existir uma falha que derrube o servidor, nesse caso, conforme orientado, é necessário que o jogo possa voltar
 a ser jogado no status que foi pausado.
 
-Demonstração de funcionalidades: É necessário que possamos jogar o be'ngo, e que em algum momento um dos jogadores tenha todos
+# Demonstração de funcionalidades:
+
+* É necessário que possamos jogar o be'ngo, e que em algum momento um dos jogadores tenha todos
 os seus números sorteados, mesmo que, após falhas, somente ele esteja na sala.
 
-Teste de concorrência: É necessário que todos os jogadores tenham uma visão única dos números que estão sendo sorteados, pois,
+# Teste de concorrência:
+
+* É necessário que todos os jogadores tenham uma visão única dos números que estão sendo sorteados, pois,
 somente o primeiro jogador a preencher sua cartela deve ganhar a partida 
 
