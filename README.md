@@ -2,7 +2,7 @@
 
 Projeto visa desenvolver métodos e conhecimento na implementação de um sistema distríbuído.
 
-# be'ngo!
+# Be'ngo!
 
 A idéia é implementar um jogo de bingo em que 4 clients consigam acompanhar os "sorteios" em tempo real até que um dos
 jogadores termine sua "cartela".
